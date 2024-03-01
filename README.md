@@ -11,3 +11,13 @@ __Webfren__ is a collection of tools to help developers create web applications 
 - [IN PROGRESS] _Redis clone_ - clone of [Redis](https://redis.io/)
 
 Project created for [100commits](https://100commitow.pl/) contest.
+
+## Roadmap
+
+01.03.2024 - 08.03.2024 - HTTP Load tester v1
+
+08.03.2024 - 15.03.2024 - Web Server v1
+
+15.03.2024 - 22.03.2024 - Load balancer v1
+
+...
