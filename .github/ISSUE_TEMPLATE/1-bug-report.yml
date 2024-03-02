@@ -1,0 +1,32 @@
+name: 🐛 Bug report
+description: Report something that does not work as expected
+labels:
+  - type:bug
+body:
+  - type: textarea
+    attributes:
+      label: Current behavior
+      description: A description of what you are experiencing.
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: A description of what you expected to happen.
+  - type: textarea
+    attributes:
+      label: Reproduction steps
+      description: Steps to reproduce the behavior.
+      placeholder: |-
+        1. …
+        2. …
+        3. …
+  - type: input
+    attributes:
+      label: Software version
+      description: In which version of the software did you notice the bug?
+      placeholder: '0.0.1'
+  - type: textarea
+    attributes:
+      label: Other details
+      description: >
+        Any other details that do not fit into other categories. For example, when this issue is a
+        follow-up to some other issue, you may mention it here.

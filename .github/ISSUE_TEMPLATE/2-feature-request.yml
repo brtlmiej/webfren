@@ -1,0 +1,21 @@
+name: ⭐ Feature request
+description: Propose a new feature
+labels:
+  - type:feature
+body:
+  - type: textarea
+    attributes:
+      label: Feature description
+      description: A description of what behavior you expect to be implemented.
+  - type: textarea
+    attributes:
+      label: Technical details
+      description: >
+        Code examples or other technical resources that may be helpful
+        to the person implementing this feature.
+  - type: textarea
+    attributes:
+      label: Other details
+      description: >
+        Any other details that do not fit into other categories. For example, when this issue is a
+        follow-up to some other issue, you may mention it here.
