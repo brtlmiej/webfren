@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "module": "es6",
-    "lib": ["es6", "dom", "es2017"],
-    "target": "es5",
+    "module": "CommonJS",
+    "lib": ["ESNext", "dom"],
+    "target": "ESNext",
     "moduleResolution": "node",
     "allowJs": true,
     "emitDecoratorMetadata": true,

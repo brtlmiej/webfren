@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Tool helping developers to work with web applications easier",
   "main": "src/index.ts",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "npx tsc",
     "start": "npx tsc && node dist/index.js",
@@ -19,8 +19,11 @@
   "devDependencies": {
     "@types/node": "^20.8.9",
     "@types/yargs": "^17.0.29",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
     "@vitest/coverage-v8": "^0.34.6",
-    "typescript": "^5.2.2",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3",
     "vitest": "^0.34.6"
   },
   "dependencies": {
