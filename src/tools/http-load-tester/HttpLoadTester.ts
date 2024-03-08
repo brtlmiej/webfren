@@ -19,16 +19,15 @@ export class HttpLoadTester {
         this.client = client;
     }
 
-    /**
+/**
  * Execute HTTP load test.
  * 
- * @param client Http client instance
  * @param url Url to test
  * @param n Number of request that will be sent. Min: 1, Max: 100000
  */
     async execute(url: string, n: number): Promise<Stats> {
-        validateUrl(url);
-        validateNumberOfRequests(n);
+        this.validateUrl(url);
+        this.validateNumberOfRequests(n);
         const requests: Array<Promise<HttpResponse>> = [];
     
         for (let i = 0; i < n; i++) {
@@ -36,6 +35,20 @@ export class HttpLoadTester {
         }
         
         return this.getRequestsStats(requests);
+    }
+
+    private validateUrl(url: string): void {
+        try {
+            new URL(url);
+        } catch {
+            throw new Error('Incorrect url address');
+        }
+    }
+    
+    private validateNumberOfRequests(n: number): void {
+        if (n < 1 || n > 100000) {
+            throw new Error('Incorrect number of requests');
+        }
     }
     
     private async getRequestsStats(requests: Array<Promise<HttpResponse>>): Promise<Stats> {
@@ -55,20 +68,6 @@ export class HttpLoadTester {
         })
     
         return stats;
-    }
-}
-
-function validateUrl(url: string): void {
-    try {
-        new URL(url);
-    } catch {
-        throw new Error('Incorrect url address');
-    }
-}
-
-function validateNumberOfRequests(n: number): void {
-    if (n < 1 || n > 100000) {
-        throw new Error('Incorrect number of requests');
     }
 }
 
