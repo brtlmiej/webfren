@@ -19,12 +19,12 @@ export class HttpLoadTester {
         this.client = client;
     }
 
-/**
- * Execute HTTP load test.
- * 
- * @param url Url to test
- * @param n Number of request that will be sent. Min: 1, Max: 100000
- */
+    /**
+     * Execute HTTP load test.
+     * 
+     * @param url Url to test
+     * @param n Number of request that will be sent. Min: 1, Max: 100000
+     */
     async execute(url: string, n: number): Promise<Stats> {
         this.validateUrl(url);
         this.validateNumberOfRequests(n);
