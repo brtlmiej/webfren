@@ -1,5 +1,5 @@
 {
-  "name": "web-fren",
+  "name": "webfren",
   "version": "0.0.1",
   "description": "Tool helping developers to work with web applications easier",
   "main": "src/index.ts",

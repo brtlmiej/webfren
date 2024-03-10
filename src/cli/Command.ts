@@ -5,7 +5,8 @@ export type Command = {
     readonly name: string;
     readonly description: string;
     readonly arguments: ReadonlyArray<Argument>;
-    readonly action: (...args: unknown[]) => void | Promise<void>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    readonly action: (...args: any[]) => void | Promise<void>;
 }
 
 /**

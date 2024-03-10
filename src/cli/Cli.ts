@@ -1,5 +1,5 @@
 import { program } from 'commander';
-import { Command } from './Command';
+import { Command } from './Command.js';
 
 /**
  * Represents Cli app.
