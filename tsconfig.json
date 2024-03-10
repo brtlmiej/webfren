@@ -1,15 +1,24 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "lib": ["ESNext", "dom"],
-    "target": "ESNext",
-    "moduleResolution": "node",
-    "allowJs": true,
-    "emitDecoratorMetadata": true,
+    "checkJs": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
     "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "declaration": false,
-    "outDir": "dist/"
+    "importHelpers": true,
+    "incremental": true,
+    "lib": ["es2023"],
+    "module": "node16",
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2022",
+    "outDir": "dist",
+    "rootDir": "src"
   },
   "include": [
     "src/"

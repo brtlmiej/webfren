@@ -1,6 +1,6 @@
-import { Cli } from "./cli/Cli";
-import { Command } from "./cli/Command";
-import { HttpLoadTester } from "./tools/http-load-tester/HttpLoadTester";
+import { Cli } from "./cli/Cli.js";
+import { Command } from "./cli/Command.js";
+import { HttpLoadTester } from "./tools/http-load-tester/HttpLoadTester.js";
 import axios from 'axios';
 
 const httpLoadTesterCmd: Command = {
