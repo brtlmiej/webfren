@@ -1,6 +1,8 @@
-# About
+<div align="center">
+  <img src="./assets/webfren.png" width="150">
+</div>
 
-__Webfren__ is a collection of tools to help developers create web applications much easier.
+__webfren__ is a collection of tools to help developers create web applications much easier.
 
 ## Features
 
