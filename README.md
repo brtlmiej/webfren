@@ -1,12 +1,13 @@
 <div align="center">
   <img src="./assets/webfren.png" width="150">
+  <p>
+    __webfren__ is a collection of tools to help developers create web applications much easier.
+  <p>
 </div>
-
-__webfren__ is a collection of tools to help developers create web applications much easier.
 
 ## Features
 
-- [IN PROGRESS] _HTTP Load tester_ - tool allowing to make stress and load test of API endpoints
+- _HTTP Load tester_ - tool allowing to make stress and load test of API endpoints
 - [IN PROGRESS] _Web Server_ - simulator of a real web server
 - [IN PROGRESS] _Load balancer_ - simulator of a load balancer
 - [IN PROGRESS] _Message Broker_ - simulator of a Message Broker
