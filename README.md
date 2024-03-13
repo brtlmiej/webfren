@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./assets/webfren.png" width="150">
   <p>
-    __webfren__ is a collection of tools to help developers create web applications much easier.
+    <b>webfren</b> is a collection of tools to help developers create web applications much easier.
   <p>
 </div>
 
