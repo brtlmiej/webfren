@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./assets/webfren.png" width="150">
   <p>
-    <b>webfren</b> is a collection of tools to help developers create web applications much easier.
+    <i><b>webfren</b> is a collection of tools to help developers create web applications much easier.</i>
   <p>
 </div>
 
