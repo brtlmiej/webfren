@@ -17,10 +17,10 @@ Project created for [100commits](https://100commitow.pl/) contest.
 
 ## Roadmap
 
-01.03.2024 - 08.03.2024 - HTTP Load tester v1
+01.03.2024 - 16.03.2024 - __HTTP Load tester v1__
 
-08.03.2024 - 15.03.2024 - Web Server v1
+16.03.2024 - 30.03.2024 - __Web Server v1__
 
-15.03.2024 - 22.03.2024 - Load balancer v1
+30.03.2024 - 14.04.2024 - __Load balancer v1__
 
 ...
