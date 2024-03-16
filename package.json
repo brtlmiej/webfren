@@ -10,7 +10,7 @@
   "scripts": {
     "build": "npx tsc",
     "start": "npx tsc && node dist/index.js",
-    "test": "vitest",
+    "test": "vitest run",
     "test:coverage": "vitest run --coverage"
   },
   "author": "brtlmiej",

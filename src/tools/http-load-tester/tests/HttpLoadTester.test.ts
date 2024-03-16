@@ -1,4 +1,4 @@
-import { test as test, vi } from 'vitest'
+import { test, vi } from 'vitest'
 import { HttpClient, HttpLoadTester, HttpResponse } from '../HttpLoadTester';
 
 const successReqMock = vi.fn();
