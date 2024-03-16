@@ -1,7 +1,6 @@
-import { test, beforeEach } from 'vitest';
-import { Cli, CliError } from '../Cli.js'
+import { test } from 'vitest';
+import { Cli } from '../Cli.js'
 import { Command } from '../Command.js';
-import { program } from 'commander';
 
 const commandMock: Command = {
     name: 'mock-command',
