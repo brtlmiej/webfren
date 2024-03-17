@@ -2,15 +2,21 @@ import { program } from 'commander';
 import { Command } from './Command.js';
 
 export class CliError extends Error {
-    constructor(error: string | unknown) {
+    constructor(error: string);
+    constructor(error: Error);
+    constructor(error: object);
+    constructor(error: unknown);
+    constructor(error: unknown) {
         let message: string;
 
         if (error instanceof Error) {
             message = error.message;
         } else if (typeof error === 'string') {
             message = error;
+        } else if (typeof error === 'object') {
+            message = "Thrown error: " + JSON.stringify(error);
         } else {
-            message = "Unknown error has been thrown: " + error?.toString() ?? JSON.stringify(error);
+            message = "Unknown error has been thrown: " + JSON.stringify(error);
         }
 
         super(message);
@@ -42,9 +48,9 @@ export class Cli {
     }
 
     /**
-     * Registers Cli and all added commands, this makes them available for end user.
+     * Parses all added commands, this makes them available for end user.
      */
-    register(): void {
+    parse(): void {
         try {
             this._commands.forEach(command => {
                 const commandHandler = program.command(command.name)

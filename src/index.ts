@@ -18,4 +18,4 @@ const httpLoadTesterCmd: Command = {
 
 const cli = new Cli();
 cli.addCommand(httpLoadTesterCmd);
-cli.register();
+cli.parse();
