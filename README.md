@@ -1,9 +1,32 @@
 <div align="center">
   <img src="./assets/webfren.png" width="150">
   <p>
-    <i><b>webfren</b> is a collection of tools to help developers create web applications much easier.</i>
+    <i><b>webfren</b> is a collection of tools to help developers create web applications much easier. All tool are available through webfren CLI.</i>
   <p>
 </div>
+
+## Installation
+
+Install __webfren__ globally:
+
+```bash
+$ npm i -g webfren
+```
+
+And it will be reade to use in your terminal!
+
+```bash
+$ webfren
+
+Usage: webfren [options] [command]
+
+Options:
+  -h, --help                display help for command
+
+Commands:
+  http-load-test <url> <n>  executes HTTP load test
+  help [command]            display help for command
+```
 
 ## Features
 
