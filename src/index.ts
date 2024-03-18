@@ -1,3 +1,4 @@
+/* v8 ignore start */
 import { Cli } from "./cli/Cli.js";
 import { Command } from "./cli/Command.js";
 import { HttpLoadTester } from "./tools/http-load-tester/HttpLoadTester.js";
@@ -19,3 +20,4 @@ const httpLoadTesterCmd: Command = {
 const cli = new Cli();
 cli.addCommand(httpLoadTesterCmd);
 cli.parse();
+/* v8 ignore stop */

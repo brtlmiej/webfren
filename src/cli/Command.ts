@@ -1,3 +1,4 @@
+/* v8 ignore start */
 /**
  * Represents command available from CLI.
  */
@@ -17,3 +18,4 @@ export type Argument = {
     readonly description: string;
     readonly required: boolean;
 }
+/* v8 ignore stop */

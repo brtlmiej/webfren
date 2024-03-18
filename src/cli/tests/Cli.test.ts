@@ -13,7 +13,10 @@ const commandMock: Command = {
 const commandMockTwo: Command = {
     name: 'mock-command-two',
     description: 'Command mock two',
-    arguments: [],
+    arguments: [
+        { name: 'a', description: 'A', required: false },
+        { name: 'b', description: 'B', required: true },
+    ],
     action: () => {}
 }
 
@@ -56,11 +59,19 @@ test('Cli#addCommand() throws exception when command with the same name already 
     expect(() => cli.addCommand(commandMock)).toThrow('Command with this name already exists');
 });
 
-test('Cli#parse() parses all added commands', ({ expect }) => {
+test('Cli#register() register all added commands', ({ expect }) => {
     const cli = new Cli();
     cli.addCommand(commandMock);
     cli.addCommand(commandMockTwo);
-    cli.parse();
+    cli.register();
 
     expect(program.commands.length).equal(2);
+});
+
+test('Cli#register() throws CliError when some error will be thrown while parsing commands', ({ expect }) => {
+    const cli = new Cli();
+    // Add same command second times
+    cli.addCommand(commandMockTwo);
+
+    expect(() => cli.register()).toThrow(CliError);
 });

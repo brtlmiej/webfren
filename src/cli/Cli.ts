@@ -48,9 +48,9 @@ export class Cli {
     }
 
     /**
-     * Parses all added commands, this makes them available for end user.
+     * Register all added commands, this makes them available for end user.
      */
-    parse(): void {
+    register(): void {
         try {
             this._commands.forEach(command => {
                 const commandHandler = program.command(command.name)
@@ -61,11 +61,22 @@ export class Cli {
                     const flag = arg.required ? `<${arg.name}>` : `[${arg.name}]`;
                     commandHandler.argument(flag, arg.description);
                 })
-        
-                commandHandler.parse();
             });
         } catch(e) {
             throw new CliError(e);
         }
     }
+
+    /* v8 ignore start */
+    /**
+     * Parses all registered commands.
+     */
+    parse(): void {
+        try {
+            program.parse();
+        } catch (e) {
+            throw new CliError(e);
+        }
+    }
+    /* v8 ignore stop */
 }
