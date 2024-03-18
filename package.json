@@ -2,8 +2,13 @@
   "name": "webfren",
   "version": "0.0.1",
   "description": "Tool helping developers to work with web applications easier",
+  "keywords": ["cli", "web", "tool"],
   "main": "src/index.ts",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brtlmiej/webfren.git"
+  },
   "bin": {
     "webfren": "dist/index.js"
   },

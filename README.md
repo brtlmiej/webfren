@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/webfren.png" width="150">
+  <img src="https://raw.githubusercontent.com/brtlmiej/webfren/master/assets/webfren.png" width="150">
   <p>
     <i><b>webfren</b> is a collection of tools to help developers create web applications much easier. All tool are available through webfren CLI.</i>
   <p>
