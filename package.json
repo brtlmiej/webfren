@@ -1,6 +1,6 @@
 {
   "name": "webfren",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha",
   "description": "Tool helping developers to work with web applications easier",
   "keywords": ["cli", "web", "tool"],
   "main": "src/index.ts",
