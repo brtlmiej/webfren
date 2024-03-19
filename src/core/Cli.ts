@@ -4,7 +4,6 @@ import { Command } from './Command.js';
 export class CliError extends Error {
     constructor(error: string);
     constructor(error: Error);
-    constructor(error: object);
     constructor(error: unknown);
     constructor(error: unknown) {
         let message: string;
@@ -13,8 +12,6 @@ export class CliError extends Error {
             message = error.message;
         } else if (typeof error === 'string') {
             message = error;
-        } else if (typeof error === 'object') {
-            message = "Thrown error: " + JSON.stringify(error);
         } else {
             message = "Unknown error has been thrown: " + JSON.stringify(error);
         }

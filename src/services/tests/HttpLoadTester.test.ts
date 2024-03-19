@@ -1,5 +1,6 @@
 import { test, vi } from 'vitest'
-import { HttpClient, HttpLoadTester, HttpResponse } from '../HttpLoadTester';
+import { HttpLoadTester } from '../HttpLoadTester';
+import { HttpClient, HttpResponse } from '../tools/HttpClient.mts';
 
 const successReqMock = vi.fn();
 const failedReqMock = vi.fn();

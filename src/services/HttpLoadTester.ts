@@ -1,10 +1,4 @@
-export type HttpClient = {
-    get: (url: string) => Promise<HttpResponse>;
-}
-
-export type HttpResponse = {
-    status: number;
-}
+import { HttpClient, HttpResponse } from "./tools/HttpClient.mjs";
 
 export type Stats = {
     failedRequests: number;

@@ -35,7 +35,7 @@ test('CliError constructor handles error message for \'Error\' value', ({ expect
 test('CliError constructor handles error message for object value value', ({ expect }) => {
     const error = new CliError({ a: 4 });
 
-    expect(error.message).equal('Thrown error: {"a":4}');
+    expect(error.message).equal('Unknown error has been thrown: {"a":4}');
 });
 
 test('CliError constructor handles error message for any other value', ({ expect }) => {
