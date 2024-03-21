@@ -1,3 +1,5 @@
+# About
+
 <div align="center">
   <img src="https://raw.githubusercontent.com/brtlmiej/webfren/master/assets/webfren.png" width="150">
   <p>
@@ -36,8 +38,6 @@ Commands:
 - [IN PROGRESS] _Message Broker_ - simulator of a Message Broker
 - [IN PROGRESS] _Redis clone_ - clone of [Redis](https://redis.io/)
 
-Project created for [100commits](https://100commitow.pl/) contest.
-
 ## Roadmap
 
 01.03.2024 - 16.03.2024 - __HTTP Load tester v1__
@@ -47,3 +47,6 @@ Project created for [100commits](https://100commitow.pl/) contest.
 30.03.2024 - 14.04.2024 - __Load balancer v1__
 
 ...
+
+<hr>
+<div align="center">Project created for <a href="https://100commitow.pl/" target="_blank">100commits</a> contest.</div>
