@@ -1,6 +1,6 @@
 # About
 
-<div align="center">
+<div align="center" style="margin: 100px">
   <img src="https://raw.githubusercontent.com/brtlmiej/webfren/master/assets/webfren.png" width="150">
   <p>
     <i><b>webfren</b> is a collection of tools created to help developers create web applications much easier. All tools are available through webfren CLI.</i>
