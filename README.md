@@ -7,7 +7,7 @@
   <p>
 </div>
 
-## Installation
+## 🚀 Getting started
 
 Install __webfren__ globally:
 
@@ -30,15 +30,17 @@ Commands:
   help [command]            display help for command
 ```
 
-## Features
+## ✨ Features
 
-- _HTTP Load tester_ - tool allowing to make stress and load test of API endpoints
-- [IN PROGRESS] _Web Server_ - simulator of a real web server
-- [IN PROGRESS] _Load balancer_ - simulator of a load balancer
-- [IN PROGRESS] _Message Broker_ - simulator of a Message Broker
-- [IN PROGRESS] _Redis clone_ - clone of [Redis](https://redis.io/)
+✅ - Done &nbsp;&nbsp;&nbsp;&nbsp; 🔄 - In Progress &nbsp;&nbsp;&nbsp;&nbsp; 📝 - Planned
 
-## Roadmap
+- ✅ _HTTP Load tester_ - tool allowing to make stress and load test of API endpoints
+- 🔄 _Web Server_ - simulator of a real web server
+- 📝 _Load balancer_ - simulator of a load balancer
+- 📝 _Message Broker_ - simulator of a Message Broker
+- 📝 _Redis clone_ - clone of [Redis](https://redis.io/)
+
+## 🚧 Roadmap
 
 01.03.2024 - 16.03.2024 - __HTTP Load tester v1__
 
