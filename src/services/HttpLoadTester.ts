@@ -1,4 +1,4 @@
-import { HttpClient, HttpResponse } from "./tools/HttpClient.mjs";
+import { HttpClient, HttpResponse } from "./tools/HttpClient.js";
 
 export type Stats = {
     failedRequests: number;
