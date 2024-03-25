@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Command } from "../../core/Command.js";
 import { HttpLoadTester } from "../../services/HttpLoadTester.js";
+import { print } from "../../services/tools/print.js";
 
 export const HttpLoadTestCommand: Command = {
     name: 'http-load-test',
@@ -12,9 +13,9 @@ export const HttpLoadTestCommand: Command = {
     action: async (url: string, n: number) => {
         const tester = new HttpLoadTester(axios);
         const stats = await tester.execute(url, n);
-        console.log('Test stats:')
-        console.log('  - Num. of success requests: ' + stats.successRequests);
-        console.log('  - Num. of failed requests: ' + stats.failedRequests);
-        console.log('  - Avg. response time: ' + stats.avgResponseTimeInMs + " ms");
+        print('Test stats:')
+        print('- Num. of success requests: ' + stats.successRequests, 3);
+        print('  - Num. of failed requests: ' + stats.failedRequests, 3);
+        print('  - Avg. response time: ' + stats.avgResponseTimeInMs + " ms", 3);
     }
 }
