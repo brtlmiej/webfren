@@ -11,6 +11,7 @@ export type EndpointConfig = {
 export type Endpoint = {
     route: string;
     content: string;
+    fileName: string;
 }
 
 export class WebServer {
@@ -50,31 +51,35 @@ export class WebServer {
     private registerEndpoints(endpointsConfig: Array<EndpointConfig>): void {
         endpointsConfig.forEach(config => {
             const route = new URL(config.route, 'http://localhost');
-            const contentFilePath = path.join(process.cwd(), config.contentFilePath);
+            const contentFilePath = config.contentFilePath.startsWith('/') 
+                ? config.contentFilePath
+                : path.join(process.cwd(), config.contentFilePath);
             const content = readFileSync(contentFilePath).toString();
+            const fileName = contentFilePath.split('/').at(-1)!
             this.endpoints.push({
                 route: route.pathname,
-                content
+                content,
+                fileName
             });
         });
     }
 
     private createServer(): Server {
         return http.createServer((req, res) => {
-            if (req.url === undefined) {
-                res.writeHead(200);
-                res.end("My first server!");
-                return;
-            }
+            const url = req.url ?? '/';
+            const endpoint = this.endpoints.find(e => e.route === url );
 
-            const endpoint = this.endpoints.find(e => e.route === req.url);
             if (endpoint === undefined) {
+                print(`Path: ${url.padEnd(15, ' ')} Response: 404`, 3);
                 res.writeHead(404);
                 res.end("Not found");
                 return;
             }
 
-            print(`Path: ${req.url ?? '/'}`, 3);
+            print(`Path: ${url.padEnd(15, ' ')} Response: 200 -> ${endpoint.fileName}`, 3);
+            res.writeHead(200);
+            res.end(endpoint.content);
+            return;
         });
     }
 }

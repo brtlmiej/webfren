@@ -19,7 +19,7 @@ test('registers endpoints based on provided config', ({ expect }) => {
 
     expect(server.endpoints).deep.equal(
         [
-            { route: '/test', content: '<h1>Hello</h1>' }
+            { route: '/test', content: '<h1>Hello</h1>', fileName: 'test.html' }
         ] satisfies Array<Endpoint>
     );
 });
