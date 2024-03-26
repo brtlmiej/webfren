@@ -11,13 +11,13 @@
 
 Install __webfren__ globally:
 
-```bash
+```text
 $ npm i -g webfren
 ```
 
 And it will be ready to use in your terminal!
 
-```bash
+```text
 $ webfren
 
 Usage: webfren [options] [command]
@@ -26,8 +26,9 @@ Options:
   -h, --help                display help for command
 
 Commands:
-  http-load-test <url> <n>  executes HTTP load test
-  help [command]            display help for command
+  http-load-test <url> <n>                     executes HTTP load test
+  web-server <port> <route> <contentFilePath>  run web server and host provided html content
+  help [command]                               display help for command
 ```
 
 ## ✨ Features
@@ -35,7 +36,7 @@ Commands:
 ✅ - Done &nbsp;&nbsp;&nbsp;&nbsp; 🔄 - In Progress &nbsp;&nbsp;&nbsp;&nbsp; 📝 - Planned
 
 - ✅ _HTTP Load tester_ - tool allowing to make stress and load test of API endpoints
-- 🔄 _Web Server_ - simulator of a real web server
+- ✅ _Web Server_ - simulator of a real web server
 - 📝 _Load balancer_ - simulator of a load balancer
 - 📝 _Message Broker_ - simulator of a Message Broker
 - 📝 _Redis clone_ - clone of [Redis](https://redis.io/)
