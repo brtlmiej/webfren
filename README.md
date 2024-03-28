@@ -49,6 +49,8 @@ Commands:
 
 30.03.2024 - 14.04.2024 - __Load balancer v1__
 
+14.04.2024 - 30.04.2024 - __HTTP Forward Proxy Server v1__
+
 ...
 
 <hr>
