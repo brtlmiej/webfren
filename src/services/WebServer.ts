@@ -2,6 +2,7 @@ import http, { Server } from 'http';
 import { readFileSync } from 'fs';
 import { print } from './tools/print.js';
 import path from 'path';
+import { parseServerPort } from './parsers/port.js';
 
 export type EndpointConfig = {
     route: string;
@@ -20,7 +21,7 @@ export class WebServer {
     readonly server: Server; 
 
     constructor(port: number, endpointsConfig: Array<EndpointConfig>) {
-        this.port = this.parsePort(port);
+        this.port = parseServerPort(port);
         this.registerEndpoints(endpointsConfig);
         this.server = this.createServer();
     }
@@ -35,17 +36,6 @@ export class WebServer {
             print();
             print('Server requests:');
         });
-    }
-
-    private parsePort(port: number): number {
-        // Port numbers can run from 0 to 65353. Port numbers from 0 to 1023 are reserved
-        // for common TCP/IP applications and are called well-known ports.
-        const min = 1024, max = 65353;
-        if (port < min || port > max) {
-            throw new Error(`Incorrect port number. Port number must be >= ${min} and <= ${max}`);
-        }
-
-        return port;
     }
 
     private registerEndpoints(endpointsConfig: Array<EndpointConfig>): void {
