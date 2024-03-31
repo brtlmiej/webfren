@@ -1,11 +1,17 @@
 # About
 
-<div align="center" style="margin: 100px">
+<br>
+<br>
+<br>
+<div align="center" style="margin:100px">
   <img src="https://raw.githubusercontent.com/brtlmiej/webfren/master/assets/webfren.png" width="150">
   <p>
     <i><b>webfren</b> is a collection of tools created to help developers create web applications much easier. All tools are available through webfren CLI.</i>
   <p>
 </div>
+<br>
+<br>
+<br>
 
 ## 🚀 Getting started
 
@@ -31,6 +37,8 @@ Commands:
   help [command]                               display help for command
 ```
 
+<br>
+
 ## ✨ Features
 
 ✅ - Done &nbsp;&nbsp;&nbsp;&nbsp; 🔄 - In Progress &nbsp;&nbsp;&nbsp;&nbsp; 📝 - Planned
@@ -40,6 +48,8 @@ Commands:
 - 🔄 _Load balancer_ - simulator of a load balancer
 - 📝 _Message Broker_ - simulator of a Message Broker
 - 📝 _Redis clone_ - clone of [Redis](https://redis.io/)
+
+<br>
 
 ## 🚧 Roadmap
 
@@ -52,6 +62,7 @@ Commands:
 08.04.2024 - 18.04.2024 - __HTTP Forward Proxy Server v1__
 
 18.04.2024 - 30.04.2024 - __HTTP Load Tester v2__
+
 ...
 
 <hr>
