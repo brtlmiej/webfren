@@ -57,11 +57,15 @@ Commands:
 
 16.03.2024 - 30.03.2024 - __Web Server v1__
 
-30.03.2024 - 08.04.2024 - __Load balancer v1__
+30.03.2024 - 08.04.2024 - __Load Balancer v1__
 
 08.04.2024 - 18.04.2024 - __HTTP Forward Proxy Server v1__
 
 18.04.2024 - 30.04.2024 - __HTTP Load Tester v2__
+
+30.04.2024 - 10.05.2024 - __Web Server v2__
+
+10.05.2024 - 20.05.2024 - __Load Balancer v2__
 
 ...
 
