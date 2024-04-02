@@ -5,5 +5,6 @@ export type HttpClient = {
 
 export type HttpResponse = {
     status: number;
+    content: string;
 }
 /* v8 ignore stop */

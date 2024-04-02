@@ -25,12 +25,16 @@ export class LoadBalancer {
     }
 
     private createServer(): Server {
-        return http.createServer((req, res) => {
+        return http.createServer(async (lbReq, lbRes) => {
             const serverAddress = this.selectServer();
-            const reqIP = req.socket.remoteAddress ?? 'CLIENT DISCONNECTED';
+            const reqIP = lbReq.socket.remoteAddress ?? 'CLIENT DISCONNECTED';
             print(`Request from: ${reqIP} redirected to ${serverAddress}`, 3);
-            res.writeHead(200);
-            res.end();
+
+            const clientResponse = await this.client.get(serverAddress.toString());
+
+            lbRes.writeHead(200);
+            lbRes.end(clientResponse.content);
+
             return;
         });
     }
