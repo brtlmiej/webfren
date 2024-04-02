@@ -59,7 +59,7 @@ export class HttpLoadTester {
             } else {
                 stats.successRequests++;
             }
-        })
+        });
     
         return stats;
     }
