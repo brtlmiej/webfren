@@ -32,7 +32,7 @@ export class LoadBalancer {
 
             const clientResponse = await this.client.get(serverAddress.toString());
 
-            lbRes.writeHead(200);
+            lbRes.writeHead(clientResponse.status);
             lbRes.end(clientResponse.content);
 
             return;

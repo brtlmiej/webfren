@@ -11,10 +11,10 @@ const client: HttpClient = {
 
         if (rand === 2) {
             successReqMock();
-            return { status: 200 };
+            return { status: 200, content: "" };
         } else {
             failedReqMock();
-            return { status: 500 };
+            return { status: 500, content: "" };
         }
 
     }
