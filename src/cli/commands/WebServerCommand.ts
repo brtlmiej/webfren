@@ -3,7 +3,7 @@ import { WebServer } from "../../services/WebServer.js";
 
 export const WebServerCommand: Command = {
     name: 'web-server',
-    description: 'run web server and host provided html content',
+    description: 'runs web server and hosts provided html content',
     arguments: [
         { name: 'port', description: 'port on which server will listen', required: true },
         { name: 'route', description: 'route on which server will host provided content', required: true },
