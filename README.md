@@ -3,7 +3,7 @@
 <br>
 <br>
 <br>
-<div align="center" style="margin:100px">
+<div align="center">
   <img src="https://raw.githubusercontent.com/brtlmiej/webfren/master/assets/webfren.png" width="150">
   <p>
     <i><b>webfren</b> is a collection of tools created to help developers create web applications much easier. All tools are available through webfren CLI.</i>
@@ -41,7 +41,7 @@ Commands:
 
 ## ✨ Features
 
-✅ - Done &nbsp;&nbsp;&nbsp;&nbsp; 🔄 - In Progress &nbsp;&nbsp;&nbsp;&nbsp; 📝 - Planned
+✅ - Available &nbsp;&nbsp;&nbsp;&nbsp; 🔄 - In Development &nbsp;&nbsp;&nbsp;&nbsp; 📝 - Planned
 
 - ✅ _HTTP Load tester_ - tool allowing to make stress and load test of API endpoints
 - ✅ _Web Server_ - simulator of a real web server
@@ -53,21 +53,22 @@ Commands:
 
 ## 🚧 Roadmap
 
-01.03.2024 - 16.03.2024 - __HTTP Load tester v1__
+➡️&nbsp;&nbsp;&nbsp;01.03.2024 - 16.03.2024 - __HTTP Load Tester v1__
 
-16.03.2024 - 30.03.2024 - __Web Server v1__
+➡️&nbsp;&nbsp;&nbsp;16.03.2024 - 30.03.2024 - __Web Server v1__
 
-30.03.2024 - 08.04.2024 - __Load Balancer v1__
+&nbsp;&nbsp;&nbsp;➡️&nbsp;&nbsp;&nbsp;30.03.2024 - 08.04.2024 - __Load Balancer v1__
 
-08.04.2024 - 18.04.2024 - __HTTP Forward Proxy Server v1__
+➡️&nbsp;&nbsp;&nbsp;08.04.2024 - 18.04.2024 - __HTTP Load Tester v2__
 
-18.04.2024 - 30.04.2024 - __HTTP Load Tester v2__
+➡️&nbsp;&nbsp;&nbsp;18.04.2024 - 30.05.2024 - __Web Server v2__
 
-30.04.2024 - 10.05.2024 - __Web Server v2__
+➡️&nbsp;&nbsp;&nbsp;30.05.2024 - 12.05.2024 - __Load Balancer v2__
 
-10.05.2024 - 20.05.2024 - __Load Balancer v2__
+➡️&nbsp;&nbsp;&nbsp;12.05.2024 - 23.05.2024 - __HTTP Load Tester v3__
 
 ...
 
 <hr>
-<div align="center">Project created for <a href="https://100commitow.pl/" target="_blank">100commits</a> contest.</div>
+
+<div align="center">Project created for <a href="https://100commitow.pl/" target="_blank">100commits</a> contest</div>
