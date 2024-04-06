@@ -69,6 +69,7 @@ Commands:
 
 ...
 
+<br>
 <hr>
 
 <div align="center">Project created for <a href="https://100commitow.pl/" target="_blank">100commits</a> contest</div>
