@@ -1,5 +1,6 @@
 import { program } from 'commander';
 import { Command } from './Command.js';
+import figlet from 'figlet';
 
 export class CliError extends Error {
     constructor(error: string);
@@ -70,7 +71,8 @@ export class Cli {
      */
     parse(): void {
         try {
-            program.parse();
+            console.log(figlet.textSync("webfren"));
+            program.version("0.0.1-alpha").parse();
         } catch (e) {
             throw new CliError(e);
         }
