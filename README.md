@@ -13,6 +13,18 @@
 <br>
 <br>
 
+## ✨ Features
+
+✅ - Available &nbsp;&nbsp;&nbsp;&nbsp; 🔄 - In Development &nbsp;&nbsp;&nbsp;&nbsp; 📝 - Planned
+
+- ✅ _HTTP Load tester_ - tool allowing to make stress and load test of API endpoints
+- ✅ _Web Server_ - simulator of a real web server
+- 🔄 _Load balancer_ - simulator of a load balancer
+- 📝 _Message Broker_ - simulator of a Message Broker
+- 📝 _Redis clone_ - clone of [Redis](https://redis.io/)
+
+<br>
+
 ## 🚀 Getting started
 
 Install __webfren__ globally:
@@ -39,18 +51,6 @@ Commands:
 
 <br>
 
-## ✨ Features
-
-✅ - Available &nbsp;&nbsp;&nbsp;&nbsp; 🔄 - In Development &nbsp;&nbsp;&nbsp;&nbsp; 📝 - Planned
-
-- ✅ _HTTP Load tester_ - tool allowing to make stress and load test of API endpoints
-- ✅ _Web Server_ - simulator of a real web server
-- 🔄 _Load balancer_ - simulator of a load balancer
-- 📝 _Message Broker_ - simulator of a Message Broker
-- 📝 _Redis clone_ - clone of [Redis](https://redis.io/)
-
-<br>
-
 ## 🚧 Roadmap
 
 ➡️&nbsp;&nbsp;&nbsp;01.03.2024 - 16.03.2024 - __HTTP Load Tester v1__
@@ -69,6 +69,7 @@ Commands:
 
 ...
 
+<br>
 <hr>
 
 <div align="center">Project created for <a href="https://100commitow.pl/" target="_blank">100commits</a> contest</div>
