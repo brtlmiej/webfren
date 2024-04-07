@@ -6,7 +6,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/brtlmiej/webfren/master/assets/webfren.png" width="150">
   <p>
-    <i><b>webfren</b> is a collection of tools created to help developers create web applications much easier. All tools are available through webfren CLI.</i>
+    <i><b>webfren</b> is a collection of tools helping developers create web applications much easier. All tools are available through webfren CLI.</i>
   <p>
 </div>
 <br>
@@ -38,15 +38,117 @@ And it will be ready to use in your terminal!
 ```text
 $ webfren
 
+               _      __                
+ __      _____| |__  / _|_ __ ___ _ __  
+ \ \ /\ / / _ \ '_ \| |_| '__/ _ \ '_ \ 
+  \ V  V /  __/ |_) |  _| | |  __/ | | |
+   \_/\_/ \___|_.__/|_| |_|  \___|_| |_|
+                                        
 Usage: webfren [options] [command]
 
 Options:
-  -h, --help                display help for command
+  -V, --version                                output the version number
+  -h, --help                                   display help for command
 
 Commands:
   http-load-test <url> <n>                     executes HTTP load test
-  web-server <port> <route> <contentFilePath>  run web server and host provided html content
-  help [command]                               display help for command
+  load-balancer <port> <servers>               runs load balancer and handles requests to multiple servers
+  web-server <port> <route> <contentFilePath>  runs web server and hosts provided html content
+  help [command]  
+```
+
+<br>
+
+## 📖 Docs
+
+### http-load-test
+
+Executes HTTP load test on specified endpoint. You can also provide number of requests (_n_) that will be sent to your endpoint. This tool can help to check locally if our app can handle multiple concurrent requests. Currently __webfren__ allows to sent only GET requests.
+
+__Example__
+
+Command
+
+```text
+$ webfren http-load-test https://example.com 100
+```
+
+Result
+
+```text
+               _      __                
+ __      _____| |__  / _|_ __ ___ _ __  
+ \ \ /\ / / _ \ '_ \| |_| '__/ _ \ '_ \ 
+  \ V  V /  __/ |_) |  _| | |  __/ | | |
+   \_/\_/ \___|_.__/|_| |_|  \___|_| |_|
+                                        
+Test stats:
+   - Num. of success requests: 100
+     - Num. of failed requests: 0
+     - Avg. response time: 0.01 ms
+```
+
+<br>
+
+### load-balancer
+
+Runs Load Balancer handling requests load to specified server addresses. This tool can help to check locally if our app will work correctly when load balancing mechanism will be introduced. Currently requests are sent ro randomly selected server.
+
+__Example__
+
+Command
+
+```text
+$ webfren load-balancer 8000 "https://example.com|https://example.test.com"
+```
+
+Result on user request on http://127.0.0.1:8000:
+
+```text
+               _      __                
+ __      _____| |__  / _|_ __ ___ _ __  
+ \ \ /\ / / _ \ '_ \| |_| '__/ _ \ '_ \ 
+  \ V  V /  __/ |_) |  _| | |  __/ | | |
+   \_/\_/ \___|_.__/|_| |_|  \___|_| |_|
+                                        
+   Request from: ::ffff:127.0.0.1 redirected to https://example.test.com/
+   Request from: ::ffff:127.0.0.1 redirected to https://example.test.com/
+```
+
+<br>
+
+### web-server
+
+Runs Web Server allowing you to host selected html content. This tool can help when you would like to check locally how your HTML web page will be displayed by web server.
+
+__Example__
+
+Content of used html file:
+
+```html
+<h1>Hello</h1>
+```
+
+Command
+
+```text
+$ webfren web-server 8000 /home home.html 
+```
+
+Result on user request on http://127.0.0.1:8000/home:
+```text
+               _      __                
+ __      _____| |__  / _|_ __ ___ _ __  
+ \ \ /\ / / _ \ '_ \| |_| '__/ _ \ '_ \ 
+  \ V  V /  __/ |_) |  _| | |  __/ | | |
+   \_/\_/ \___|_.__/|_| |_|  \___|_| |_|
+                                        
+Web Server is running:
+   - Port: 8000
+
+Server requests:
+   Path: /home           Response: 200 -> home.html
+   Path: /favicon.ico    Response: 404
 ```
 
 <br>
