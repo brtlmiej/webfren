@@ -82,10 +82,14 @@ Result
   \ V  V /  __/ |_) |  _| | |  __/ | | |
    \_/\_/ \___|_.__/|_| |_|  \___|_| |_|
                                         
+Http Load Test is running...
+
+Done!
+
 Test stats:
-   - Num. of success requests: 100
-     - Num. of failed requests: 0
-     - Avg. response time: 0.01 ms
+   Num. of success requests: 100
+   Num. of failed requests: 0
+   Avg. response time: 0.01 ms
 ```
 
 <br>
@@ -99,10 +103,10 @@ __Example__
 Command
 
 ```text
-$ webfren load-balancer 8000 "https://example.com|https://example.test.com"
+$ webfren load-balancer 9000 "https://example.com|https://example.test.com"
 ```
 
-Result on user request on http://127.0.0.1:8000:
+Result on user request on http://127.0.0.1:9000:
 
 ```text
                _      __                
@@ -111,8 +115,11 @@ Result on user request on http://127.0.0.1:8000:
   \ V  V /  __/ |_) |  _| | |  __/ | | |
    \_/\_/ \___|_.__/|_| |_|  \___|_| |_|
                                         
-   Request from: ::ffff:127.0.0.1 redirected to https://example.test.com/
-   Request from: ::ffff:127.0.0.1 redirected to https://example.test.com/
+Load Balancer is running:
+   Port: 9000
+
+Requests:
+   Path: /               Redirected to: https://example.com/ Response: 200
 ```
 
 <br>
@@ -144,11 +151,10 @@ Result on user request on http://127.0.0.1:8000/home:
    \_/\_/ \___|_.__/|_| |_|  \___|_| |_|
                                         
 Web Server is running:
-   - Port: 8000
+   Port: 8000
 
-Server requests:
+Requests:
    Path: /home           Response: 200 -> home.html
-   Path: /favicon.ico    Response: 404
 ```
 
 <br>

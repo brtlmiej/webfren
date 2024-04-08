@@ -32,9 +32,9 @@ export class WebServer {
     listen(): void {
         this.server.listen(this.port, () => {
             print('Web Server is running:');
-            print(`- Port: ${this.port}`, 3);
+            print(`Port: ${this.port}`, 3);
             print();
-            print('Server requests:');
+            print('Requests:');
         });
     }
 

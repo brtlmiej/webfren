@@ -23,7 +23,7 @@ export class HttpLoadTester {
         this.validateUrl(url);
         this.validateNumberOfRequests(n);
         const requests: Array<Promise<HttpResponse>> = [];
-    
+
         for (let i = 0; i < n; i++) {
             requests.push(this.client.get(url));
         }
