@@ -19,7 +19,7 @@
 
 - ✅ _HTTP Load tester_ - tool allowing to make stress and load test of API endpoints
 - ✅ _Web Server_ - simulator of a real web server
-- 🔄 _Load balancer_ - simulator of a load balancer
+- ✅ _Load balancer_ - simulator of a load balancer
 - 📝 _Message Broker_ - simulator of a Message Broker
 - 📝 _Redis clone_ - clone of [Redis](https://redis.io/)
 
@@ -165,9 +165,9 @@ Requests:
 
 ➡️&nbsp;&nbsp;&nbsp;16.03.2024 - 30.03.2024 - __Web Server v1__
 
-&nbsp;&nbsp;&nbsp;➡️&nbsp;&nbsp;&nbsp;30.03.2024 - 08.04.2024 - __Load Balancer v1__
+➡️&nbsp;&nbsp;&nbsp;30.03.2024 - 08.04.2024 - __Load Balancer v1__
 
-➡️&nbsp;&nbsp;&nbsp;08.04.2024 - 18.04.2024 - __HTTP Load Tester v2__
+&nbsp;&nbsp;&nbsp;➡️&nbsp;&nbsp;&nbsp;08.04.2024 - 18.04.2024 - __HTTP Load Tester v2__
 
 ➡️&nbsp;&nbsp;&nbsp;18.04.2024 - 30.05.2024 - __Web Server v2__
 
