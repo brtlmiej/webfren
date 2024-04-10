@@ -1,5 +1,5 @@
 /* v8 ignore start */
-export type HttpClient = {
+export interface HttpClient {
     get: (url: string) => Promise<HttpResponse>;
 }
 
