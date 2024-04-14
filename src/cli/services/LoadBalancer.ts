@@ -38,7 +38,7 @@ export class LoadBalancer {
             print(`Path: ${url.padEnd(15, ' ')} Redirected to: ${serverAddress} Response: ${clientResponse.status}`, 3);
 
             lbRes.writeHead(clientResponse.status);
-            lbRes.end(clientResponse.content);
+            lbRes.end(clientResponse.data);
 
             return;
         });

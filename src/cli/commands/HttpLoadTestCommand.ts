@@ -1,8 +1,8 @@
 
-import axios from "axios";
-import { Command } from "../../core/Command.js";
-import { HttpLoadTester } from "../../services/HttpLoadTester.js";
-import { print } from "../../services/tools/print.js";
+import { AxiosHttpClient } from "./dependencies/AxiosHttpClient.js";
+import { Command } from "../Command.js";
+import { HttpLoadTester } from "../services/HttpLoadTester.js";
+import { print } from "../services/tools/print.js";
 
 export const HttpLoadTestCommand: Command = {
     name: 'http-load-test',
@@ -13,8 +13,11 @@ export const HttpLoadTestCommand: Command = {
     ],
     action: async (url: string, n: number) => {
         print('Http Load Test is running...');
-        const tester = new HttpLoadTester(axios);
+
+        const client = new AxiosHttpClient();
+        const tester = new HttpLoadTester(client);
         const stats = await tester.execute(url, n);
+
         print();
         print('Done!');
         print();

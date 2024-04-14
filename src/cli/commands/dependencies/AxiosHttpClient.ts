@@ -1,5 +1,5 @@
 import axios, { AxiosResponse, AxiosStatic, Timing } from "axios";
-import { HttpClient, HttpResponse } from "../../../services/tools/HttpClient.js";
+import { HttpClient, HttpResponse } from "../../services/tools/HttpClient.js";
 
 /**
  * Implementation of HttpClient using axios library
@@ -11,14 +11,19 @@ export class AxiosHttpClient implements HttpClient {
         this.client = configureAxiosClient();
     }
 
-    get(url: string): Promise<HttpResponse> {
+    async get(url: string): Promise<HttpResponse> {
         try {
-            return axios.get(url);
+            const axiosRes = await axios.get(url);
+            return {
+                ...axiosRes,
+                responseTimeInMs: axiosRes.timing?.elapsedTimeInMs ?? 0
+            }
         } catch {
-            return Promise.resolve({
+            return {
                 status: 500,
-                content: 'Unknown error'
-            });
+                data: 'Unknown error',
+                responseTimeInMs: 0
+            };
         }
     };
 

@@ -51,6 +51,7 @@ export class HttpLoadTester {
             successRequests: 0,
             avgResponseTimeInMs: 0
         }
+        let responsesTimeSum: number = 0;
     
         const responses = await Promise.all(requests);
         responses.forEach(res => {
@@ -59,7 +60,9 @@ export class HttpLoadTester {
             } else {
                 stats.successRequests++;
             }
+            responsesTimeSum += res.responseTimeInMs;
         });
+        stats.avgResponseTimeInMs = responsesTimeSum / requests.length;
     
         return stats;
     }

@@ -3,7 +3,7 @@
 import { HttpLoadTestCommand } from "./cli/commands/HttpLoadTestCommand.js";
 import { LoadBalancerCommand } from "./cli/commands/LoadBalancerCommand.js";
 import { WebServerCommand } from "./cli/commands/WebServerCommand.js";
-import { Cli } from "./core/Cli.js";
+import { Cli } from "./cli/Cli.js";
 
 const cli = new Cli();
 cli.addCommand(HttpLoadTestCommand);

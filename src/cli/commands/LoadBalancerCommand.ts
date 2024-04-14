@@ -1,6 +1,6 @@
 import axios from "axios";
-import { Command } from "../../core/Command.js";
-import { LoadBalancer } from "../../services/LoadBalancer.js";
+import { Command } from "../Command.js";
+import { LoadBalancer } from "../services/LoadBalancer.js";
 
 export const LoadBalancerCommand: Command = {
     name: 'load-balancer',
