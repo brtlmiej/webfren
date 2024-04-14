@@ -5,6 +5,7 @@ export interface HttpClient {
 
 export type HttpResponse = {
     status: number;
-    content: string;
+    data: string;
+    responseTimeInMs: number;
 }
 /* v8 ignore stop */

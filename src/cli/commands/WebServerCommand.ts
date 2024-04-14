@@ -1,5 +1,5 @@
-import { Command } from "../../core/Command.js";
-import { WebServer } from "../../services/WebServer.js";
+import { Command } from "../Command.js";
+import { WebServer } from "../services/WebServer.js";
 
 export const WebServerCommand: Command = {
     name: 'web-server',
