@@ -4,7 +4,7 @@ export default defineConfig({
     test: {
       coverage: {
         all: true,
-        exclude: ['**/__utils.ts']
+        exclude: ['**/__utils.ts', '**/*.d.ts']
       }
     },
   })

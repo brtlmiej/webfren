@@ -4,7 +4,7 @@ import { HttpClient, HttpResponse } from '../tools/HttpClient';
 
 const client: HttpClient = {
     get: async (url: string): Promise<HttpResponse> => {
-        return { status: 200, content: url };
+        return { status: 200, data: url, responseTimeInMs: 10 };
     }
 }
 
