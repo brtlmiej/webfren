@@ -10,7 +10,8 @@
     "importHelpers": true,
     "incremental": true,
     "lib": ["es2023"],
-    "module": "node16",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "noImplicitOverride": true,
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
@@ -18,7 +19,8 @@
     "strict": true,
     "target": "es2022",
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "src",
+    "resolveJsonModule": true
   },
   "include": [
     "src/"

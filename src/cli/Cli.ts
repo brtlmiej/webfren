@@ -25,7 +25,14 @@ export class CliError extends Error {
  * Represents Cli app.
  */
 export class Cli {
+    private name: string;
+    private version: string;
     private _commands: Set<Command> = new Set();
+
+    constructor(name: string, version: string) {
+        this.name = name;
+        this.version = version;
+    }
 
     get commands(): ReadonlySet<Command> {
         return this._commands;
@@ -71,8 +78,8 @@ export class Cli {
      */
     parse(): void {
         try {
-            console.log(figlet.textSync("webfren"));
-            program.version("0.0.1-alpha").parse();
+            console.log(figlet.textSync(this.name));
+            program.version(this.version).parse();
         } catch (e) {
             throw new CliError(e);
         }
