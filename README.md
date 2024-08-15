@@ -51,7 +51,7 @@ Options:
   -h, --help                                   display help for command
 
 Commands:
-  http-load-test <url> <n>                     executes HTTP load test
+  http-load-test <url> <n> [method] [data]     executes HTTP load test
   load-balancer <port> <servers>               runs load balancer and handles requests to multiple servers
   web-server <port> <route> <contentFilePath>  runs web server and hosts provided html content
   help [command]  
@@ -63,14 +63,14 @@ Commands:
 
 ### http-load-test
 
-Executes HTTP load test on specified endpoint. You can also provide number of requests (_n_) that will be sent to your endpoint. This tool can help to check locally if our app can handle multiple concurrent requests. Currently __webfren__ allows to sent only GET requests.
+Executes HTTP load test on specified endpoint. You can also provide number of requests (_n_) that will be sent to your endpoint. This tool can help to check locally if our app can handle multiple concurrent requests. You can send GET, POST, PUT and DELETE requests.
 
 __Example__
 
 Command
 
 ```text
-$ webfren http-load-test https://example.com 100
+$ webfren http-load-test https://example.com 100 POST '{"data": "hello"}'
 ```
 
 Result
@@ -156,31 +156,3 @@ Web Server is running:
 Requests:
    Path: /home           Response: 200 -> home.html
 ```
-
-<br>
-
-## 🚧 Roadmap
-
-➡️&nbsp;&nbsp;&nbsp;01.03.2024 - 16.03.2024 - __HTTP Load Tester v1__
-
-➡️&nbsp;&nbsp;&nbsp;16.03.2024 - 30.03.2024 - __Web Server v1__
-
-➡️&nbsp;&nbsp;&nbsp;30.03.2024 - 08.04.2024 - __Load Balancer v1__
-
-&nbsp;&nbsp;&nbsp;➡️&nbsp;&nbsp;&nbsp;08.04.2024 - 18.04.2024 - __HTTP Load Tester v2__
-
-➡️&nbsp;&nbsp;&nbsp;18.04.2024 - 30.05.2024 - __Web Server v2__
-
-➡️&nbsp;&nbsp;&nbsp;30.05.2024 - 12.05.2024 - __Load Balancer v2__
-
-➡️&nbsp;&nbsp;&nbsp;12.05.2024 - 23.05.2024 - __HTTP Load Tester v3__
-
-➡️&nbsp;&nbsp;&nbsp;23.05.2024 - 07.06.2024 - __Message Broker v1__
-
-...
-
-<br>
-<br>
-<hr>
-
-<div align="center">Project created for <a href="https://100commitow.pl/" target="_blank">100commits</a> contest</div>
