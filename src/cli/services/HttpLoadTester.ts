@@ -1,4 +1,4 @@
-import { HttpClient, HttpResponse } from "./tools/HttpClient.js";
+import { HttpClient, HttpMethod, HttpResponse } from "./tools/HttpClient.js";
 
 export type Stats = {
     failedRequests: number;
@@ -18,14 +18,21 @@ export class HttpLoadTester {
      * 
      * @param url Url to test
      * @param n Number of request that will be sent. Min: 1, Max: 100000
+     * @param method HTTP method to use
+     * @param data Data to send in request body
      */
-    async execute(url: string, n: number): Promise<Stats> {
+    async execute(
+        url: string,
+        n: number,
+        method: HttpMethod,
+        data?: Record<string, unknown> | string,
+    ): Promise<Stats> {
         this.validateUrl(url);
         this.validateNumberOfRequests(n);
         const requests: Array<Promise<HttpResponse>> = [];
 
         for (let i = 0; i < n; i++) {
-            requests.push(this.client.get(url));
+            requests.push(this.client.request(url, method, data ));
         }
         
         return this.getRequestsStats(requests);

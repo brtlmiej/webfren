@@ -1,6 +1,6 @@
-import axios from "axios";
 import { Command } from "../Command.js";
 import { LoadBalancer } from "../services/LoadBalancer.js";
+import { AxiosHttpClient } from "./dependencies/AxiosHttpClient.js";
 
 export const LoadBalancerCommand: Command = {
     name: 'load-balancer',
@@ -16,8 +16,9 @@ export const LoadBalancerCommand: Command = {
         },
     ],
     action: (port: number, servers: string ) => {
+        const client = new AxiosHttpClient();
         const serverAddresses = servers.split('|');
-        const server = new LoadBalancer(port, serverAddresses, axios);
+        const server = new LoadBalancer(port, serverAddresses, client);
         server.run();
     }
 }

@@ -3,6 +3,7 @@ import { AxiosHttpClient } from "./dependencies/AxiosHttpClient.js";
 import { Command } from "../Command.js";
 import { HttpLoadTester } from "../services/HttpLoadTester.js";
 import { print } from "../services/tools/print.js";
+import { HttpMethod } from "../services/tools/HttpClient.js";
 
 export const HttpLoadTestCommand: Command = {
     name: 'http-load-test',
@@ -10,13 +11,15 @@ export const HttpLoadTestCommand: Command = {
     arguments: [
         { name: 'url', description: 'url to test' , required: true },
         { name: 'n', description: 'number of requests to send' , required: true },
+        { name: 'method', description: 'HTTP method to use. Default: \'GET\'' , required: false },
+        { name: 'data', description: 'data to send in request body' , required: false },
     ],
-    action: async (url: string, n: number) => {
+    action: async (url: string, n: number, method?: HttpMethod, data?: string) => {
         print('Http Load Test is running...');
 
         const client = new AxiosHttpClient();
         const tester = new HttpLoadTester(client);
-        const stats = await tester.execute(url, n);
+        const stats = await tester.execute(url, n, method ?? 'GET', data);
 
         print();
         print('Done!');
